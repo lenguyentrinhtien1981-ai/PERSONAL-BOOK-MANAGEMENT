@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#09090B" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <title>ShelfScan AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              primary: '#10B981', // Emerald 500
+              secondary: '#3B82F6', // Blue 500
+              dark: '#18181B', // Zinc 900
+              darker: '#09090B', // Zinc 950
+              card: '#27272A', // Zinc 800
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Mobile App Behavior Overrides */
+      body {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+        user-select: none;
+        -webkit-user-select: none;
+        overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile */
+      }
+      
+      /* Allow text selection on inputs */
+      input, textarea {
+        user-select: text;
+        -webkit-user-select: text;
+      }
+
+      /* Hide Scrollbars */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Safe Area Utilities */
+      .pt-safe {
+        padding-top: env(safe-area-inset-top);
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom);
+      }
+      .pb-safe-nav {
+        padding-bottom: calc(4rem + env(safe-area-inset-bottom));
+      }
+      
+      /* Smooth transitions */
+      .page-transition {
+        animation: fadeIn 0.3s ease-in-out;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+</head>
+  <body class="bg-darker text-slate-200 font-sans antialiased selection:bg-emerald-500 selection:text-white overflow-hidden fixed inset-0">
+    <div id="root" class="h-full overflow-y-auto overflow-x-hidden"></div>
+  </body>
+</html>

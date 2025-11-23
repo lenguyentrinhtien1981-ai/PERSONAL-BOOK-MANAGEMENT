@@ -1,0 +1,7 @@
+{
+  "name": "PERSONAL BOOK MANAGEMENT",
+  "description": "Ứng dụng quản lý thư viện thông minh sử dụng Gemini để quét, sắp xếp và theo dõi hành trình đọc sách của bạn.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
